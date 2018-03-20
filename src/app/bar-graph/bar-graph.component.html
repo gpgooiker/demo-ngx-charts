@@ -1,4 +1,17 @@
 <h1>Herwonnen materialen</h1>
 <ngx-charts-bar-vertical
-  [view]="recycledMaterial">
+  [view]="viewPortSize"
+  [xAxis]="true"
+  [yAxis]="true"
+  [results]="recycledMaterial"
+  [gradient]="false"
+  [legend]="true"
+  [legendTitle]="'Legenda'"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [xAxisLabel]="'Materiaal'"
+  [yAxisLabel]="'Herwonnen kilo\'s'"
+  [yScaleMax] = "yScaleMax"
+  [animations]="false"
+  >
 </ngx-charts-bar-vertical>

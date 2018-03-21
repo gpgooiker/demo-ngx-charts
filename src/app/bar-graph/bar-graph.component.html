@@ -1,17 +1,21 @@
-<section class="graph-size">
-  <ngx-charts-bar-vertical [view]="viewPortSize"
-                           [xAxis]="true"
-                           [yAxis]="true"
-                           [results]="recycledMaterialsData"
-                           [gradient]="false"
-                           [legend]="false"
-                           [legendTitle]="'Legenda'"
-                           [showXAxisLabel]="true"
-                           [showYAxisLabel]="true"
-                           [xAxisLabel]="'Materiaal'"
-                           [yAxisLabel]="'Herwonnen kilo\'s'"
-                           [yScaleMax]="yScaleMax"
-                           [animations]="false"> </ngx-charts-bar-vertical>
-  <ngx-charts-advanced-pie-chart [view]="pieSize"
-                                 [results]="pieData()"> </ngx-charts-advanced-pie-chart>
+<section>
+  <div class="bar-graph-size">
+    <ngx-charts-bar-vertical [view]="viewPortSize"
+                             [xAxis]="true"
+                             [yAxis]="true"
+                             [results]="recycledMaterialsData"
+                             [gradient]="false"
+                             [legend]="false"
+                             [legendTitle]="'Legenda'"
+                             [showXAxisLabel]="true"
+                             [showYAxisLabel]="true"
+                             [xAxisLabel]="'Materiaal'"
+                             [yAxisLabel]="'Herwonnen kilo\'s'"
+                             [yScaleMax]="yScaleMax"
+                             [animations]="true"> </ngx-charts-bar-vertical>
+  </div>
+  <div class="pie-chart-size">
+    <ngx-charts-advanced-pie-chart [view]="pieSize"
+    [results]="pieData()"> </ngx-charts-advanced-pie-chart>
+  </div>
 </section>

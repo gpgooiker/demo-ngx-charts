@@ -10,3 +10,25 @@ body {
 * {
   box-sizing: border-box;
 }
+
+app-bar-graph {
+  .advanced-pie-legend {
+    .total-value {
+      display: none;
+    }
+
+    .total-label {
+      display: none;
+    }
+
+    .legend-items-container .legend-items  .legend-item {
+      .item-label, .item-value {
+      font-size: 12px;
+      }
+      .item-percent {
+        font-size: 14px;
+      }
+    }
+  }
+}
+

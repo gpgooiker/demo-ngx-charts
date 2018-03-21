@@ -1,7 +1,15 @@
 @import "../../styles-variables";
 
-.graph-size {
-  height: 600px;
-  width: 80%;
-  padding: $spacing;
+section {
+  position: relative;
+
+  .bar-graph-size {
+  }
+
+  .pie-chart-size {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
+

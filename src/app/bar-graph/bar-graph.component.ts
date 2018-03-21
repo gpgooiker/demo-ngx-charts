@@ -8,8 +8,8 @@ import { DataPoint } from "../model/data-point";
 })
 export class BarGraphComponent {
   yScaleMax: number = 1000;
-  viewPortSize: number[];
-  pieSize: number[] = [300, 300];
+  viewPortSize: number[] = [260, 400];
+  pieSize: number[] = [290, 180];
 
   constructor() {
   }
@@ -22,11 +22,11 @@ export class BarGraphComponent {
   pieData = (): DataPoint[] => {
     return [
       {
-        name: "recycled",
+        name: "Gerecycled",
         value: this.recycledMaterials
       },
       {
-        name: "rest",
+        name: "Rest",
         value:
         this.totalMaterials - this.recycledMaterials
       }

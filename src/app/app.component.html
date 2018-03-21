@@ -1,1 +1,10 @@
-<app-bar-graph></app-bar-graph>
+<main>
+  <section>
+    <app-section-header header="Tonnage"
+                        (click)="updateData()"> {{tonnageBlurb()}} </app-section-header>
+    <app-bar-graph [recycledPercentage]=recycledPercentage
+                   [totalMaterials]=totalMaterials
+                   [recycledMaterials]=recycledMaterials
+                   [recycledMaterialsData]=recycledMaterialsData></app-bar-graph>
+  </section>
+</main>

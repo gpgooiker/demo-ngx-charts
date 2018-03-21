@@ -1,17 +1,17 @@
-<h1>Herwonnen materialen</h1>
-<ngx-charts-bar-vertical
-  [view]="viewPortSize"
-  [xAxis]="true"
-  [yAxis]="true"
-  [results]="recycledMaterial"
-  [gradient]="false"
-  [legend]="true"
-  [legendTitle]="'Legenda'"
-  [showXAxisLabel]="true"
-  [showYAxisLabel]="true"
-  [xAxisLabel]="'Materiaal'"
-  [yAxisLabel]="'Herwonnen kilo\'s'"
-  [yScaleMax] = "yScaleMax"
-  [animations]="false"
-  >
-</ngx-charts-bar-vertical>
+<section class="graph-size">
+  <ngx-charts-bar-vertical [view]="viewPortSize"
+                           [xAxis]="true"
+                           [yAxis]="true"
+                           [results]="recycledMaterialsData"
+                           [gradient]="false"
+                           [legend]="false"
+                           [legendTitle]="'Legenda'"
+                           [showXAxisLabel]="true"
+                           [showYAxisLabel]="true"
+                           [xAxisLabel]="'Materiaal'"
+                           [yAxisLabel]="'Herwonnen kilo\'s'"
+                           [yScaleMax]="yScaleMax"
+                           [animations]="false"> </ngx-charts-bar-vertical>
+  <ngx-charts-advanced-pie-chart [view]="pieSize"
+                                 [results]="pieData()"> </ngx-charts-advanced-pie-chart>
+</section>

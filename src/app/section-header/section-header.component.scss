@@ -1,0 +1,21 @@
+@import "../../styles-variables";
+
+header {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  background-color: $brand-primary;
+  color: white;
+  margin: 0;
+  padding: $spacing;
+  margin-bottom: 2*$spacing;
+
+  h1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  p {
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+}

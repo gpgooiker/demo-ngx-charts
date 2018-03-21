@@ -1,21 +1,37 @@
-import { Component } from "@angular/core";
-import { recycledMaterialsData } from "../data/recycled-materials";
+import { Component, Input } from "@angular/core";
 import { DataPoint } from "../model/data-point";
 
 @Component({
   selector: "app-bar-graph",
-  templateUrl: "bar-graph.component.html"
+  templateUrl: "bar-graph.component.html",
+  styleUrls: ["bar-graph.component.scss"]
 })
 export class BarGraphComponent {
-  recycledMaterial: DataPoint[] = [];
   yScaleMax: number = 1000;
-  viewPortSize: number[] = [600, 600];
+  viewPortSize: number[];
+  pieSize: number[] = [300, 300];
 
   constructor() {
-    this.recycledMaterial = recycledMaterialsData;
-
-    this.yScaleMax = this.determineHighestYValue(this.recycledMaterial);
   }
+
+  @Input() recycledPercentage: number;
+  @Input() totalMaterials: number;
+  @Input() recycledMaterials: number;
+  @Input() recycledMaterialsData: DataPoint[];
+
+  pieData = (): DataPoint[] => {
+    return [
+      {
+        name: "recycled",
+        value: this.recycledMaterials
+      },
+      {
+        name: "rest",
+        value:
+        this.totalMaterials - this.recycledMaterials
+      }
+    ]
+  };
 
   determineHighestYValue(data: DataPoint[]): number {
     let result = 1;
@@ -24,7 +40,7 @@ export class BarGraphComponent {
       if (d.value > result) {
         result = d.value;
       }
-    })
+    });
 
     return result;
   }

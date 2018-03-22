@@ -12,10 +12,14 @@
                              [xAxisLabel]="'Materiaal'"
                              [yAxisLabel]="'Herwonnen kilo\'s'"
                              [yScaleMax]="yScaleMax"
-                             [animations]="true"> </ngx-charts-bar-vertical>
+                             [animations]="true"
+                             [scheme]="colorScheme"> </ngx-charts-bar-vertical>
   </div>
   <div class="pie-chart-size">
-    <ngx-charts-advanced-pie-chart [view]="pieSize"
-    [results]="pieData()"> </ngx-charts-advanced-pie-chart>
+    <ngx-charts-pie-chart [view]="pieSize"
+                          [results]="pieData()"
+                          [doughnut]="doughnut"
+                          [arcWidth]="pieArcWidth"
+                          [scheme]="colorScheme"></ngx-charts-pie-chart>
   </div>
 </section>

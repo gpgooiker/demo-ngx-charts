@@ -43,6 +43,6 @@ export const altRecycledMaterialsData: DataPoint[] = [
   },
   {
     name: "Reststoffen",
-    value: 670
+    value: 340
   }
 ];

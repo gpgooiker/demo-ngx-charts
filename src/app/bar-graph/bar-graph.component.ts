@@ -9,7 +9,9 @@ import { DataPoint } from "../model/data-point";
 export class BarGraphComponent {
   yScaleMax: number = 1000;
   viewPortSize: number[] = [260, 400];
-  pieSize: number[] = [290, 180];
+  pieSize: number[] = [150, 150];
+  pieArcWidth = 0.2;
+  doughnut = true;
 
   constructor() {
   }
@@ -23,14 +25,17 @@ export class BarGraphComponent {
     return [
       {
         name: "Gerecycled",
-        value: this.recycledMaterials
+        value: this.recycledPercentage
       },
       {
-        name: "Rest",
-        value:
-        this.totalMaterials - this.recycledMaterials
+        name: "F",
+        value: 100 - this.recycledPercentage
       }
     ]
+  };
+
+  colorScheme = {
+    domain: ['#ABCB59', '#EF7C11', '#009ED9', '#07A74C', '#ABCB59', '#EF7C11', '#009ED9', '#07A74C']
   };
 
   determineHighestYValue(data: DataPoint[]): number {

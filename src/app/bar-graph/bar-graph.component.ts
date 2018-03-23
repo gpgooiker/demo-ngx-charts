@@ -8,10 +8,12 @@ import { DataPoint } from "../model/data-point";
 })
 export class BarGraphComponent {
   yScaleMax: number = 1000;
-  viewPortSize: number[] = [260, 400];
-  pieSize: number[] = [150, 150];
+  viewPortSize: number[] = [280, 400];
+  pieSize: number[] = [120, 120];
   pieArcWidth = 0.2;
   doughnut = true;
+  showPieLabels = false;
+  showPieAnimations = false;
 
   constructor() {
   }

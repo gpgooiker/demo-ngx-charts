@@ -11,7 +11,7 @@ export const altRecycledMaterialsData: DataPoint[] = [
   },
   {
     name: "Monitoren",
-    value: 138
+    value: 1138
   },
   {
     name: "Electromotoren",
@@ -31,18 +31,18 @@ export const altRecycledMaterialsData: DataPoint[] = [
   },
   {
     name: "Textiel",
-    value: 203
+    value: 1203
   },
   {
     name: "Printplaten",
-    value: 730
+    value: 1730
   },
   {
     name: "Roestvrijstaal",
-    value: 90
+    value: 1290
   },
   {
     name: "Reststoffen",
-    value: 340
+    value: 1900
   }
 ];
